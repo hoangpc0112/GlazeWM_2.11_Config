@@ -88,7 +88,6 @@ bar:
   components_left:
     - type: "text"
       text: ""
-      foreground: *blue
       margin: "0 0 0 10px"
 
     - type: "workspaces"
@@ -104,11 +103,12 @@ bar:
 
     - type: "music"
       label_not_playing: "Not Playing"
-      label_paused: "  {song_title}"
-      label_playing: "  {song_title}"
-      max_title_length: 40
+      label_paused: "  {song_title} - {artist_name}"
+      label_playing: "  {song_title} - {artist_name}"
+      max_title_length: 35
+      max_artist_length: 10
       margin: "0 0 0 22px"
-      foreground: *teal
+      foreground: *red
 
     - type: "volume"
       label_low: "  {volume_level}%"
@@ -116,11 +116,11 @@ bar:
       label_high: "  {volume_level}%"
       label_mute: "  {volume_level}%"
       margin: "0 0 0 22px"
-      foreground: *green
+      foreground: *peach
 
   components_center:
     - type: "window title"
-      foreground: *blue
+      foreground: *yellow
 
     # - type: "clock"
     #   time_formatting: "hh:mm tt ddd dd/MM/yyyy"
@@ -130,7 +130,7 @@ bar:
     - type: "tiling direction"
       label_horizontal: "⮂"
       label_vertical: "⮁"
-      foreground: *lavender
+      foreground: *green
 
     # - type: "network"
     #   label_no_internet: "No Internet"
@@ -146,31 +146,31 @@ bar:
       label: "CPU: {percent_usage}%"
       refresh_interval_ms: 1000
       margin: "0 0 0 22px"
-      foreground: *red
+      foreground: *teal
 
     - type: "memory"
       label: "RAM: {percent_usage}%"
       refresh_interval_ms: 1000
       margin: "0 0 0 22px"
-      foreground: *peach
+      foreground: *sapphire
 
     - type: "gpu"
       label: "GPU: {percent_usage}%"
       refresh_interval_ms: 1000
       margin: "0 0 0 22px"
-      foreground: *yellow
+      foreground: *blue
 
     - type: "battery"
       margin: "0 0 0 22px"
       label_draining: "󰁹 {battery_level}%"
       label_power_saver: "󱉞 {battery_level}%"
       label_charging: "󱐋 {battery_level}%"
-      foreground: *sapphire
+      foreground: *mauve
 
     - type: "clock"
       time_formatting: "🕓 HH:mm  📅 ddd dd/MM/yyyy"
       margin: "0 0 0 22px"
-      foreground: *green
+      foreground: *pink
 
 workspaces:
   - name: "1"
@@ -208,7 +208,7 @@ window_rules:
   - command: "set floating"
     match_process_name: "Notepad"
 
-  - command: "set floating"
+  - command: "ignore"
     match_process_name: "Flow.Launcher"
 
   - command: "set floating"
