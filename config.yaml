@@ -1,5 +1,4 @@
 rosewater: &rosewater "#f5e0dc"
-
 flamingo: &flamingo "#f2cdcd"
 pink: &pink "#f5c2e7"
 mauve: &mauve "#cba6f7"
@@ -14,7 +13,6 @@ sapphire: &sapphire "#74c7ec"
 blue: &blue "#89b4fa"
 lavender: &lavender "#b4befe"
 text: &text "#cdd6f4"
-
 subtext1: &subtext1 "#bac2de"
 subtext0: &subtext0 "#a6adc8"
 overlay2: &overlay2 "#9399b2"
@@ -23,7 +21,6 @@ overlay0: &overlay0 "#6c7086"
 surface2: &surface2 "#585b70"
 surface1: &surface1 "#45475a"
 surface0: &surface0 "#313244"
-
 base: &base "#1e1e2e"
 mantle: &mantle "#181825"
 crust: &crust "#0f0f18"
@@ -101,6 +98,10 @@ bar:
       default_workspace_background: "transparent"
       margin: "0 0 0 22px"
 
+    # - type: "window title"
+    #   foreground: *blue
+    #   margin: "0 0 0 22px"
+
     - type: "music"
       label_not_playing: "Not Playing"
       label_paused: "  {song_title}"
@@ -119,7 +120,11 @@ bar:
 
   components_center:
     - type: "window title"
-      foreground: *blue 
+      foreground: *blue
+
+    # - type: "clock"
+    #   time_formatting: "hh:mm tt ddd dd/MM/yyyy"
+    #   foreground: *blue
 
   components_right:
     - type: "tiling direction"
@@ -155,19 +160,17 @@ bar:
       margin: "0 0 0 22px"
       foreground: *yellow
 
-    # - type: "battery"
-    #   font_size: 13
-    #   margin: "0 0 0 22px"
-    #   label_draining: "<attr fs='13' fg='#89ca78'>󰁹</attr> {battery_level}"
-    #   label_power_saver: "<attr fs='13' fg='#ef596f'>󱉞</attr> {battery_level}"
-    #   label_charging: "<attr fs='13' fg='#89ca78'>󱐋</attr> {battery_level}"
+    - type: "battery"
+      margin: "0 0 0 22px"
+      label_draining: "󰁹 {battery_level}%"
+      label_power_saver: "󱉞 {battery_level}%"
+      label_charging: "󱐋 {battery_level}%"
+      foreground: *sapphire
 
     - type: "clock"
-      # Documentation on formatting date/time string:
-      # https://learn.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings
       time_formatting: "🕓 HH:mm  📅 ddd dd/MM/yyyy"
       margin: "0 0 0 22px"
-      foreground: *sapphire
+      foreground: *green
 
 workspaces:
   - name: "1"
@@ -184,7 +187,6 @@ workspaces:
 
 window_rules:
   # Task Manager requires admin privileges to manage and should be ignored unless running
-
   # the WM as admin.
   - command: "ignore"
     match_process_name: "/Taskmgr|ScreenClippingHost/"
@@ -206,16 +208,16 @@ window_rules:
   - command: "set floating"
     match_process_name: "Notepad"
 
-  - command: "ignore"
+  - command: "set floating"
     match_process_name: "Flow.Launcher"
 
-  - command: "ignore"
+  - command: "set floating"
     match_process_name: "Zalo"
 
-  - command: "ignore"
+  - command: "set floating"
     match_process_name: "steamwebhelper"
 
-  - command: "ignore"
+  - command: "set floating"
     match_process_name: "java"
 
   # - command: "set floating"
@@ -228,12 +230,9 @@ window_rules:
   #   match_process_name: "IDMan"
 
   # - command: "ignore"
-
   #   match_process_name: "eso64|DaggerfallUnity|valheim|OpenMW|openmw|openmw.exe"
 
-
   # - command: "move to workspace 2"
-
   #   match_process_name: "firefox|thorium"
 
   # - command: "move to workspace 3"
@@ -241,7 +240,6 @@ window_rules:
 
 
 binding_modes:
-
   - name: "resize"
     keybindings:
       # Resize focused window by a percentage or pixel amount.
