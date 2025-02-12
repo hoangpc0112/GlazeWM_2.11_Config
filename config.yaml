@@ -211,7 +211,7 @@ window_rules:
   - command: "ignore"
     match_process_name: "Flow.Launcher"
 
-  - command: "set floating"
+  - command: "ignore"
     match_process_name: "Zalo"
 
   - command: "set floating"
@@ -238,7 +238,6 @@ window_rules:
   # - command: "move to workspace 3"
   #   match_process_name: "Discord|mailspring|slack"
 
-
 binding_modes:
   - name: "resize"
     keybindings:
@@ -262,7 +261,7 @@ keybindings:
     bindings: ["Alt+E"]
   - command: "exec 'C:\\Users\\HoangPC\\AppData\\Local\\Programs\\cursor\\Cursor.exe'"
     bindings: ["Alt+C"]
-  - command: "exec 'C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\PowerShell\\PowerShell 7 (x64).lnk'"
+  - command: "exec wt"
     bindings: ["Alt+Enter"]
 
   # Shift focus in a given direction.
@@ -284,7 +283,6 @@ keybindings:
     bindings: ["Alt+Shift+K", "Alt+Shift+Up"]
   - command: "move down"
     bindings: ["Alt+Shift+J", "Alt+Shift+Down"]
-
 
   # Resize focused window by a percentage or pixel amount.
   - command: "resize width -2%"
@@ -309,7 +307,6 @@ keybindings:
   - command: "focus mode toggle"
     binding: "Alt+K"
 
-
   # Change the focused window to be floating / tiling.
   - command: "toggle floating"
     binding: "Alt+Shift+Space"
@@ -318,13 +315,11 @@ keybindings:
   - command: "toggle maximized"
     binding: "Alt+X"
 
-
   # Minimize focused window.
   - command: "set minimized"
     binding: "Alt+M"
 
   # Close focused window.
-
   - command: "close"
     binding: "Alt+Q"
 
@@ -332,16 +327,9 @@ keybindings:
   - command: "exit wm"
     binding: "Alt+Shift+E"
 
-
   # Re-evaluate configuration file.
   - command: "reload config"
     binding: "Alt+Shift+R"
-
-
-  # Launch CMD terminal (alternatively `exec wt` or `exec %ProgramFiles%/Git/git-bash.exe`
-  # to start Windows Terminal and Git Bash respectively.
-  - command: "exec 'C:\\Program Files\\WindowsApps\\Microsoft.WindowsTerminal_1.19.10821.0_x64__8wekyb3d8bbwe\\WindowsTerminal.exe'"
-    binding: "Alt+Enter"
 
   # Focus the workspace that last had focus.
   - command: "focus workspace recent"
@@ -369,7 +357,6 @@ keybindings:
   - command: "focus workspace 7"
     binding: "Alt+7"
   - command: "focus workspace 8"
-
     binding: "Alt+8"
   - command: "focus workspace 9"
     binding: "Alt+9"
@@ -384,28 +371,22 @@ keybindings:
   # - command: "move workspace down"
   #   binding: "Alt+S"
 
-
   # Move focused window to a workspace defined in `workspaces` config.
-
   - commands: ["move to workspace 1", "focus workspace 1"]
     binding: "Alt+Shift+1"
   - commands: ["move to workspace 2", "focus workspace 2"]
     binding: "Alt+Shift+2"
   - commands: ["move to workspace 3", "focus workspace 3"]
-
     binding: "Alt+Shift+3"
   - commands: ["move to workspace 4", "focus workspace 4"]
     binding: "Alt+Shift+4"
-
   - commands: ["move to workspace 5", "focus workspace 5"]
     binding: "Alt+Shift+5"
   - commands: ["move to workspace 6", "focus workspace 6"]
     binding: "Alt+Shift+6"
   - commands: ["move to workspace 7", "focus workspace 7"]
-
     binding: "Alt+Shift+7"
   - commands: ["move to workspace 8", "focus workspace 8"]
     binding: "Alt+Shift+8"
-
   - commands: ["move to workspace 9", "focus workspace 9"]
     bindings: ["Alt+Shift+9"]
