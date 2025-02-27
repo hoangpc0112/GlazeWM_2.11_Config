@@ -253,11 +253,11 @@ binding_modes:
         bindings: ["Escape", "Enter"]
 
 keybindings:
-  - command: "exec 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe'"
+  - command: "exec '%ProgramFiles%\\Google\\Chrome\\Application\\chrome.exe'"
     bindings: ["Alt+B"]
   - command: "exec explorer"
     bindings: ["Alt+E"]
-  - command: "exec code"
+  - command: "exec '%LOCALAPPDATA%\\Programs\\Microsoft VS Code\\Code.exe'"
     bindings: ["Alt+C"]
   - command: "exec wt"
     bindings: ["Alt+Enter"]
