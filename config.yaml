@@ -52,7 +52,6 @@ general:
   window_animations: "false"
 
 gaps:
-
   # Gap between adjacent windows.
   inner_gap: 15
 
@@ -66,7 +65,6 @@ focus_borders:
   active:
     enabled: true
     color: "#4169E1"
-
 
   inactive:
     enabled: false
@@ -140,7 +138,7 @@ bar:
     #   label_wifi_strength50: "Wi-Fi"
     #   label_wifi_strength75: "Wi-Fi"
     #   label_wifi_strength100: "Wi-Fi"
-    #   margin: "0 0 0 22px" 
+    #   margin: "0 0 0 22px"
 
     - type: "cpu"
       label: "CPU: {percent_usage}%"
@@ -175,7 +173,7 @@ bar:
 workspaces:
   - name: "1"
     keep_alive: true
-    
+
   - name: "2"
   - name: "3"
   - name: "4"
@@ -259,7 +257,7 @@ keybindings:
     bindings: ["Alt+B"]
   - command: "exec explorer"
     bindings: ["Alt+E"]
-  - command: "exec 'C:\\Users\\HoangPC\\AppData\\Local\\Programs\\cursor\\Cursor.exe'"
+  - command: "exec code"
     bindings: ["Alt+C"]
   - command: "exec wt"
     bindings: ["Alt+Enter"]
